@@ -38,7 +38,7 @@ EPD_HEIGHT      = 296
 RST_PIN         = 12
 DC_PIN          = 8
 CS_PIN          = 9
-BUSY_PIN        = 13
+BUSY_PIN        = 15
 
 
 WF_PARTIAL_2IN66 =[
@@ -245,3 +245,4 @@ if __name__=='__main__':
 
 
 
+  
