@@ -1,0 +1,22 @@
+# to Generate the image go to Gimp -> Image -> Mode Indexed || Resize it to your liking like 30 x 30
+# Save the image as bmp
+# convert image.bmp image.pbm
+# python fbimage image.pbm
+
+# Some links
+# http://www.penguintutor.com/programming/picodisplayanimations
+# https://github.com/peterhinch/micropython-font-to-py
+# https://www.thepythoncode.com/article/generate-read-qr-code-python
+# https://dronebotworkshop.com/epaper/
+# https://github.com/soonuse/epd-library-python
+# https://github.com/JPFrancoia/esp32_devkit_waveshare_eink_screen/tree/master/src
+# https://learn.adafruit.com/assets/99339
+# Pinouts
+# https://www.waveshare.com/wiki/Pico-ePaper-2.7
+
+
+fb_space = framebuf.FrameBuffer(bytearray(b'\xff\xfc\xff\xfc\xff\xf8\x7f\xfc\xff\xf0?\xfc\xff\xf0?\xfc\xff\xe0\x1f\xfc\xff\xe0\x1f\xfc\xff\xe0\x1f\xfc\xff\xc0\x0f\xfc\xff\xc0\x0f\xfc\xff\xc0\x0f\xfc\xff\xc0\x0f\xfc\xff\xc0\x0f\xfc\xff\xc0\x0f\xfc\xff\xc0\x0f\xfc\xff\xc0\x0f\xfc\xff\xc0\x0f\xfc\xff\xc0\x0f\xfc\xff\xc0\x0f\xfc\xff\xc0\x0f\xfc\xff\xc0\x0f\xfc\xff\xc0\x0f\xfc\xff\xc0\x0f\xfc\xff\xc0\x0f\xfc\xff\xc0\x0f\xfc\xff\xc0\x0f\xfc\xff\xe0\x1f\xfc\xff\xff\xff\xfc\xff\xf3?\xfc\xff\xe3\x1f\xfc\xff\xe3\x1f\xfc'), 30, 30, framebuf.MONO_HLSB)
+
+
+
+epd.image1Gray_Landscape.blit(fb_space,5,35,epd.black)
